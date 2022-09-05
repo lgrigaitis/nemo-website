@@ -23,7 +23,8 @@ st.set_page_config(
      }
  )
 
-st.title("Let's find Nemo the best location!")
+st.title("Finiding the best Marine Protected Areas (MPA's)")
+st.subheader("MPA - geographically distinct zones with set protection objectives")
 
 # df = gpd.read_file("/Users/lgrigaitis/code/lgrigaitis/nemo-website/notebooks/mpa_poli_with_country.shp")
 # df.crs = "EPSG:4326"
@@ -41,24 +42,27 @@ st.title("Let's find Nemo the best location!")
 #     highlight=False,
 #     smooth_factor=1.0).add_to(m)
 
-im = Image.open('/Users/lgrigaitis/code/lgrigaitis/nemo-website/raw_data/nemo_picture.png')
+im = Image.open('/Users/lgrigaitis/code/lgrigaitis/nemo-website/raw_data/marine1.jpg')
 mpa_image = Image.open('/Users/lgrigaitis/code/lgrigaitis/nemo-website/raw_data/MPA.png')
 
 map_data = pd.DataFrame({'lat': [53.0000], 'lon': [9.0000]})
 
 with st.container():
-    map_col, text_col, text_col_2 = st.columns((3,1,1))
-    with map_col:
-        st.map(map_data)
+    img_col, text_col, text_col_2, text_col_3 = st.columns((2,1,1,1))
+    with img_col:
+        st.image(im)
 
     with text_col:
-        st.subheader("What is an MPA?")
-        st.write("These marine areas can come in many forms ranging from wildlife refuges to research facilities. MPAs restrict human activity for a conservation purpose, typically to protect natural or cultural resources.")
+        st.subheader("Ecosystem")
+        st.write("The system of living and non-living components that coexist in the same area.")
 
     with text_col_2:
-        st.subheader("What is an MPA?")
-        st.write("These marine areas can come in many forms ranging from wildlife refuges to research facilities. MPAs restrict human activity for a conservation purpose, typically to protect natural or cultural resources.")
+        st.subheader("Biodiversity")
+        st.write("The different kinds of life you’ll find in one area, from animals to microorganisms.")
 
+    with text_col_3:
+            st.subheader("Ecosystem service")
+            st.write("Any positive, quantifiable benefit that an healthy ecosystem provides to people.")
 
 st.markdown("## What are the benefits of MPA's?")
 st.image(mpa_image)
