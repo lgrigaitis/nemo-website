@@ -53,3 +53,12 @@ pypi_test:
 
 pypi:
 	@twine upload dist/* -u $(PYPI_USERNAME)
+
+
+
+# ----------------------------------
+#      STREAMLIT COMMANDS
+# ----------------------------------
+
+streamlit:
+	-@streamlit run nemo-website/app.py
