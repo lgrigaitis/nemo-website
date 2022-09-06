@@ -13,6 +13,9 @@ geopandas
 plotly
 folium
 matplotlib
+pydeck<0.8.0
+pybase64
+requests
 
 
 # tests/linter
