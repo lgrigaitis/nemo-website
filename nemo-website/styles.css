@@ -1,6 +1,6 @@
 .css-1offfwp.e16nr0p33 {
 
-            color : black
+            color : white
 }
 
 .css-10trblm.e16nr0p30 {
@@ -19,6 +19,26 @@
   color : black
 }
 
+.css-ocqkz7.e1tzin5v4 {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100vw;
+}
 
+.block-container.css-18e3th9.egzxvld2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
+.appview-container.css-1wrcr25.egzxvld4 {
+ margin:0;
+ padding-right:0;
+ padding-left:0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
 /* */
